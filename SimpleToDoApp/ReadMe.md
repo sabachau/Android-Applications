@@ -1,4 +1,4 @@
-# Pre-work - SimpleToDo App
+# SimpleToDo App
 
 **SimpleToDo App** is an android app that allows building a todo list and basic todo items management functionality including adding new items, editing and deleting an existing item.
 
@@ -19,7 +19,7 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://www.github.com/sabachau/Android-Applications/SimpleToDoApp/simpleTodoApp_3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/sabachau/Android-Applications/blob/master/SimpleToDoApp/simpleTodoApp_3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
