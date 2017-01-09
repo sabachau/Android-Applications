@@ -29,6 +29,7 @@
         android:id="@+id/tvOverview"
         android:layout_below="@+id/tvTitle"
         android:layout_toRightOf="@+id/ivMovieImage"
-        android:layout_toEndOf="@+id/ivMovieImage" />
+        android:layout_toEndOf="@+id/ivMovieImage"
+        android:textAlignment="@integer/gap_between_image_text" />
 
 </RelativeLayout>
