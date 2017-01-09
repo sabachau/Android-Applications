@@ -1,7 +1,7 @@
 package com.csaba.flixter;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListView;
 
@@ -38,7 +38,7 @@ public class MovieActivity extends AppCompatActivity {
         String url = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
         AsyncHttpClient client = new AsyncHttpClient();
 
-        client.get(url, new JsonHttpResponseHandler(){
+        client.get(url, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 JSONArray movieJsonResults = null;
@@ -59,5 +59,8 @@ public class MovieActivity extends AppCompatActivity {
                 Log.d("fail*****", "######fail");
             }
         });
+
+
     }
+
 }
