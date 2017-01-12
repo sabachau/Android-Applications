@@ -63,29 +63,21 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie>{
 
         }
 
-//        //find the image view
-//        ImageView ivImage = (ImageView) convertView.findViewById(R.id.ivMovieImage);
-//
-//
-//        //clear out imaage from convertView
-//        ivImage.setImageResource(0);
-//
-//        TextView tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
-//        TextView tvOverview = (TextView) convertView.findViewById(R.id.tvOverview);
-
         // Populate the data from the data object via the viewHolder object
         // into the template view.
         viewHolder.title.setText(movie.getOriginalTitle());
         viewHolder.overview.setText(movie.getOverview());
 
         if (orientation == Configuration.ORIENTATION_LANDSCAPE){
-            Picasso.with(getContext()).load(movie.getBackdropPath()).into(viewHolder.image);
-            Picasso.with(getContext()).load(movie.getBackdropPath()).fit().centerCrop()
+            Picasso.with(getContext()).load(movie.getBackdropPath())
                     .placeholder(R.drawable.user_placeholder)
-                    .error(R.drawable.user_placeholder_error)
+                    .error(R.drawable.error_placeholder)
                     .into(viewHolder.image);
         }else if(orientation == Configuration.ORIENTATION_PORTRAIT){
-            Picasso.with(getContext()).load(movie.getPosterPath()).into(viewHolder.image);
+            Picasso.with(getContext()).load(movie.getPosterPath()).fit().centerCrop()
+                    .placeholder(R.drawable.user_placeholder)
+                    .error(R.drawable.error_placeholder)
+                    .into(viewHolder.image);
         }
         // Return the completed view to render on screen
         return convertView;
